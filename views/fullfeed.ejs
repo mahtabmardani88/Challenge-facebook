@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Feed</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome</h1>
+        <a href="/home">Home</a>
+    </header>
+    <div class="content">
+        <h2><%= post.name %></h2>
+        <p><%= post.message %></p>
+        <p><%= post.createdAt %></p>
+    </div>
+    <div class="up-del-btns">
+        <form action="/delete-post/<%= post._id %>" method="post">
+            <button>Delete</button>
+        </form>
+        <form action="/edit-post/<%= post._id %>" method="get">
+            <button>Edit Post</button>
+        </form>
+    </div>
+</body>
+</html>
